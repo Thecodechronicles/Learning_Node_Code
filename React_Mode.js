@@ -23,24 +23,12 @@ var user = {
     }
 }
 
-
 var userElement = {
     props: {},
     render: function () {
         if (this.props.children) {
-            console.log('userElementChildren: ', this.props.children);
-            // return [
-            //     {
-            //         a: 'nameUserElement',
-            //         b: 'addressUserElement',
-            //         ...this.props.propObj
-            //     },
-            //     ...this.props.children
-            // ]
-            // console.log('ahfgb:  ', { ...this.props.children });
             return React.createElement(arrDiv, null, React.createElement(user, null),
                 this.props.children,
-                // React.createElement(user, { u: 'you !', v: 'we !' })
             );
         }
     }
@@ -69,14 +57,12 @@ var userComponent = React.createElement(
 var pageDOM = ReactDOM.render(userComponent);
 console.log(JSON.stringify(pageDOM, null, 2));
 
+const readline = require('readline').createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
 
-
-// const readline = require('readline').createInterface({
-//     input: process.stdin,
-//     output: process.stdout
-// });
-
-// readline.question('Object Input :', input => {
-//     pageDOM['2']['0']['0']['m'] = input;
-//     readline.close();
-// });
+readline.question('Object Input :', input => {
+    pageDOM['2']['0']['0']['m'] = input;
+    readline.close();
+});
