@@ -118,7 +118,6 @@ var arrDiv = {
                 }
             }
         }
-
         if (this.props.children) {
             recursion(this.props.children);
             return auxillaryArray;
@@ -174,9 +173,7 @@ var ReactDOM = {
                 }
                 renderedArray = renderedArray.element.render();
             }
-
             for (var i = 0; i < renderedArray.length; i++) {
-
                 if (renderedArray[i].element) {
                     renderedArray[i].element.props.propObj = renderedArray[i].props;
 
@@ -193,7 +190,6 @@ var ReactDOM = {
                         }
                         domObject = domObject.element.render();
                     }
-
                     if (domObject.length) {
                         recursiveElements(renderedObject, domObject, i);
                     }
