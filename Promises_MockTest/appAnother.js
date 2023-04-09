@@ -1,32 +1,4 @@
 
-// function avn(value) {
-//     var i = value;
-//     return function () {
-//         var j = 1;
-//         i = i + 11;
-//         j = j + 1
-//         console.log('i: ', i);
-//         console.log('j: ', j);
-//     }
-// }
-
-// var nmo = avn(11);
-// var lmn = avn(5);
-
-// console.log('nmo: ');
-// for (var n = 0; n < 8; n++) {
-//     nmo();
-// }
-
-// console.log('lmn: ');
-// for (var n = 0; n < 8; n++) {
-//     lmn();
-// }
-
-
-
-
-
 var promiseObj = {
     // promiseInst
 }
@@ -48,7 +20,7 @@ function promiseM(mainCalback) {
     var rejectThread;
     this.rejectM;
     var currentPromise = this;
-    // var That = this;
+
     k = k + 1;
 
     mainCalback(function (data) { //resolve callback
@@ -98,17 +70,8 @@ function promiseM(mainCalback) {
                             }, [k, 21]);
                     }
                 }
-                // else if (returnValue == undefined) {
-                //     console.log('uvw ', 'k: ', k, 'param: ', param);
-                //     nrv = 1;
-                //     promiseObj.promiseInst.rejectM('returnValue');
-                // }
                 clearInterval(idResolve);
                 clearInterval(idReject);
-                // if (currentPromise == promiseObj.promiseInst) {
-                //     console.log('yzv');
-                //     promiseObj.promiseInst.rejectM(returnValue);
-                // }
             }
         }, 1000);
 
@@ -139,14 +102,8 @@ function promiseM(mainCalback) {
             console.log('param: ', param);
             console.log('promiseObj.promiseInst.j: ', promiseObj.promiseInst.j);
             if ((rejectData !== undefined)
-                // && (nrv !== 1)
             ) {
                 errorCallback(rejectData);
-
-                // if ((currentPromise == promiseObj.promiseInst) || (rv == 1)) {
-                //     console.log('its a match !', param);
-                //     clearInterval(idReject);
-                // }
 
                 for (var i = 0; i < idArr.length; i++) {
                     for (var y = 0; y < idArr[i].idReject.length; y++) {
@@ -158,7 +115,6 @@ function promiseM(mainCalback) {
                         clearInterval(idArr[i].idResolve[z]);
                     }
                 }
-
                 if (currentPromise == promiseObj.promiseInst) {
                     console.log('its a match !', param);
                     clearInterval(idReject);
@@ -166,31 +122,20 @@ function promiseM(mainCalback) {
                 clearInterval(idResolve);
 
             }
-            // else if (nrv == 1) {
-            //     clearInterval(idReject);
-            //     // clearInterval(idResolve);
-            // }
         }, 1000);
         if (currentPromise !== promiseObj.promiseInst) {
             console.log('pushed !', param);
             idArr[0].idReject.push(idReject);
         }
-        // idArr[0].idReject.push(idReject);
         return this;
     }
-
-    // this.catchM((error) => {
-    //     promiseObj.promiseInst.rejectThread(error);
-    // });
 }
 
 
 
 
-
-var mongooseM = {
-
-}
+// mongo lib test
+var mongooseM = {}
 
 mongooseM.modelM = function (collectionName, collectionObject) {
 
@@ -250,17 +195,17 @@ var Speakers = mongooseM.modelM('Speakers', {
 //     console.log(error);
 // });
 
-Speakers.find('super').thenM((result) => {
-    console.log('result1: ', result);
-    return 'heros';
-    // return new promiseM((resolve, reject) => {
-    //     setTimeout(() => {
-    //         // resolve('Marvel1');
-    //         reject('RajComics');
-    //     }, 5000);
-    // });
-})
-    .thenM((result2) => {
+Speakers.find('super')
+    .thenM((result) => {
+        console.log('result1: ', result);
+        return 'heros';
+        // return new promiseM((resolve, reject) => {
+        //     setTimeout(() => {
+        //         // resolve('Marvel1');
+        //         reject('RajComics');
+        //     }, 5000);
+        // });
+    }).thenM((result2) => {
         console.log('result2: ', result2);
         return new promiseM((resolve, reject) => {
             setTimeout(() => {
@@ -268,8 +213,7 @@ Speakers.find('super').thenM((result) => {
                 reject('RajComics');
             }, 2000);
         });
-    })
-    .thenM((result4) => {
+    }).thenM((result4) => {
         console.log('result4: ', result4);
         return 'Batman';
     }).thenM((result5) => {
