@@ -13,7 +13,7 @@ app.get('/abc', function (req, res, next) {
 
 app.get('/abc', function (req, res, next) {
     console.log('inside abc two');
-    next();
+    // next();
 });
 
 app.get('/abc', function (req, res, next) {

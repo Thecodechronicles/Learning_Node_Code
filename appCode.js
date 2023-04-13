@@ -42,16 +42,15 @@ function expressM() {
             });
 
             // console.log(routeTemp);
-            if (routeTemp[0].routeNode === route) {
+            // if (routeTemp[0].routeNode === route) {
 
-                var i = 1;
-
-                routeTemp[0].cb(req, res, function next() {
-                    do {
-                        routeTemp[i++].cb(req, res, next);
-                    } while (i <= routeTemp.lemgth);
-                });
-            }
+            var i = 1;
+            routeTemp[0].cb(req, res, function next() {
+                // do {
+                routeTemp[i++].cb(req, res, next);
+                // } while (i <= routeTemp.lemgth);
+            });
+            // }
         }
     }
 }

@@ -48,16 +48,31 @@
 
 // console.log({ 1: [{ a: 'hey !' }] });
 
-const abc = {
-    a: 'hi !',
-    b: 'Hello !!',
-    c: {
+// const abc = {
+//     a: 'hi !',
+//     b: 'Hello !!',
+//     c: {
 
-    }
-}
+//     }
+// }
 
-const ijk = {
-    ...abc
-}
+// const ijk = {
+//     ...abc
+// }
 
-console.log(ijk);
+// console.log(ijk);
+
+
+const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin');
+// console.log(ExtractTextWebpackPlugin);
+
+const pluginObject = new ExtractTextWebpackPlugin('style.css');
+
+// console.log('ExtractTextWebpackPlugin_extract() : ', ExtractTextWebpackPlugin.extract({ use: ['css-loader', 'sass-loader'] }));
+// console.log('ExtractTextWebpackPlugin_new ExtractTextWebpackPlugin() : ', new ExtractTextWebpackPlugin('style.css'));
+
+// console.log('ExtractTextWebpackPlugin_extract() : ', pluginObject.extract({ use: ['css-loader', 'sass-loader'] }));
+// console.log('pluginObject : ', pluginObject);
+// // console.log(JSON.stringify(pluginObject));
+// console.log('prototype: ', ExtractTextWebpackPlugin.prototype)
+// console.log('function : ', ExtractTextWebpackPlugin);
