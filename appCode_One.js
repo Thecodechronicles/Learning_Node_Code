@@ -63,10 +63,14 @@
 // console.log(ijk);
 
 
-const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin');
-// console.log(ExtractTextWebpackPlugin);
 
-const pluginObject = new ExtractTextWebpackPlugin('style.css');
+
+
+
+// const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin');
+// // console.log(ExtractTextWebpackPlugin);
+
+// const pluginObject = new ExtractTextWebpackPlugin('style.css');
 
 // console.log('ExtractTextWebpackPlugin_extract() : ', ExtractTextWebpackPlugin.extract({ use: ['css-loader', 'sass-loader'] }));
 // console.log('ExtractTextWebpackPlugin_new ExtractTextWebpackPlugin() : ', new ExtractTextWebpackPlugin('style.css'));
@@ -76,3 +80,88 @@ const pluginObject = new ExtractTextWebpackPlugin('style.css');
 // // console.log(JSON.stringify(pluginObject));
 // console.log('prototype: ', ExtractTextWebpackPlugin.prototype)
 // console.log('function : ', ExtractTextWebpackPlugin);
+
+
+
+
+
+
+
+let componentHooks = [];
+let currentHookIndex = 0;
+
+// How useState works inside React (simplified).
+function useState(initialState) {
+    // let pair = componentHooks[currentHookIndex];
+    let pair = componentHooks[`${initialState}Key`];
+    // console.log('array pair: ', pair);
+    // console.log('currentHookIndex: ', currentHookIndex);
+    if (pair) {
+        console.log('inside pair check');
+        // This is not the first render,
+        // so the state pair already exists.
+        // Return it and prepare for next Hook call.
+        // currentHookIndex++;
+        return pair;
+    }
+
+    // This is the first time we're rendering,
+    // so create a state pair and store it.
+    pair = [initialState, setState];
+
+    function setState(nextState) {
+        console.log('inside setState()');
+        // When the user requests a state change,
+        // put the new value into the pair.
+        pair[0] = nextState;
+        // updateDOM();
+        // return useState(0);
+    }
+
+    console.log('Hello Ji !!');
+    // Store the pair for future renders
+    // and prepare for the next Hook call.
+    // componentHooks[currentHookIndex] = pair;
+    componentHooks[`${initialState}Key`] = pair;
+    // currentHookIndex++;
+    return pair;
+}
+
+// var [state, setState] = 
+var array = useState(1);
+var arrayAbc = useState('abc');
+var [state, setState] = array;
+var [stateAbc, setStateAbc] = arrayAbc;
+console.log(state);
+console.log(stateAbc);
+// console.log(array);
+
+// useState(1);
+// setState(11);
+setStateAbc('ijk');
+var arrayTwo = useState(1);
+var arrayAbcd = useState('abc');
+var [stateTwo, setStateTwo] = arrayTwo;
+var [stateAbcd, setStateAbcd] = arrayAbcd;
+console.log(stateTwo);
+console.log(stateAbcd);
+// console.log(arrayTwo);
+
+// setStateAbcd('mno');
+setStateTwo(5);
+var arrayFour = useState(1);
+var arrayAbzg = useState('abc');
+var [stateFour, setStateFour] = arrayFour;
+var [stateAbzg, setStateAbzg] = arrayAbzg;
+console.log(stateFour);
+console.log(stateAbzg);
+
+
+// setState1(21);
+// var array4 = useState(0);
+// var [state2, setState2] = array4;
+// // console.log(array4);
+// console.log(state2);
+
+
+// console.log(setState(21));
