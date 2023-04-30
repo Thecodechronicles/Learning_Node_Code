@@ -61,6 +61,35 @@ function promiseM(mainCallback) {
         return this;
     }
 
+    // this.thenM = function (resultCallback) {
+    //     var runCheckOnce = 1;
+    //     callbackArray.push(resultCallback);
+    //     idResolve = setInterval(() => {
+    //         if (resolveData !== undefined) {
+    //             runCheckOnce = null;
+    //             function promiseReturnCheck(resolveDataSet, cbPosition) {
+    //                 var promiseM2 = callbackArray[cbPosition](resolveDataSet);
+    //                 if (promiseM2.resolveData) {
+    //                     resolveData = promiseM2.resolveData;
+    //                     cbPosition = cbPosition + 1;
+    //                     // resultCallback(promiseM2.resolveData);
+    //                     promiseReturnCheck(promiseM2.resolveData, cbPosition);
+    //                 }
+    //                 else {
+    //                     clearInterval(idResolve);
+    //                     clearInterval(idReject);
+    //                 }
+    //             }
+    //             if (runCheckOnce == 1) {
+    //                 promiseReturnCheck(resolveData, 0);
+    //             }
+    //             // clearInterval(idResolve);
+    //             // clearInterval(idReject);
+    //         }
+    //     }, 1000);
+    //     return this;
+    // }
+
     this.catchM = function (errorCallback) {
         idReject = setInterval(() => {
             if (rejectData !== undefined) {

@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "chalk": "^2.4.1",
+    "express": "^4.18.2",
     "extract-text-webpack-plugin": "^3.0.0",
     "request": "^2.88.2",
     "validator": "^13.7.0",
