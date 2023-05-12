@@ -1,6 +1,6 @@
 
 // from StackOverflow to exlplain how promises work behind the scenes
-function Promise(executor) {
+function PromiseA(executor) {
     if (!executor) throw "Promise executor undefined"
     let status = "pending", value, thenQ = []
 

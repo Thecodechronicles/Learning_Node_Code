@@ -34,8 +34,8 @@
 
 // // Code Example 2   
 // // https://youtu.be/vmMTN676mn8?t=112
-// // for (var i = 0; i < 5; i++) {
-// for (let i = 0; i < 5; i++) {
+// for (var i = 0; i < 5; i++) {
+//     // for (let i = 0; i < 5; i++) {
 //     // const value = i; // const is block-scoped
 //     // var value = i; // var is function-scoped
 //     setTimeout(() => {
