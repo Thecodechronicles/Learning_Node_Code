@@ -45,11 +45,10 @@ function expressM() {
             if (routeTemp[0].routeNode === route) {
 
                 var i = 1;
-
                 routeTemp[0].cb(req, res, function next() {
-                    do {
-                        routeTemp[i++].cb(req, res, next);
-                    } while (i <= routeTemp.lemgth);
+                    // do {
+                    routeTemp[i++].cb(req, res, next);
+                    // } while (i <= routeTemp.lemgth);
                 });
             }
         }

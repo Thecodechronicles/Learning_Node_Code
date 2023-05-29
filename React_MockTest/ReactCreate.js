@@ -25,7 +25,7 @@ module.exports.React = {  // My implementation
 // }
 
 // // JSX transformation (createElement has to dynamically check for 'children' passed in as var args inside createElement)
-// // and then return an obect by injectiog children as a seperate property inside thr props object
+// // and then return an obect by injectiog children as a seperate property inside the props object
 // // Hence the work of injecting children as a property is done dynamically at the time of running of react app coz React.createElement
 // // would run inside of render() methods of components 
 // React.createElement(

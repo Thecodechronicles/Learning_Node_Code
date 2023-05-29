@@ -44,13 +44,15 @@
 
 // '/home/ankit/Downloads/videoTutorials/Git/Learning Git and GitHub/[TutsNode.com] - Learning Git and GitHub'
 
+// /home/ankit/Downloads/videoTutorials/Android/The_comprehensive_2019_android_development_masterclass
+
 const { readdirSync, rename } = require('fs');
 const { resolve } = require('path');
 
 const renameRootFolder = 'FileFolderRenamePracticeTemp';
 
 // const dirPath = resolve(__dirname, renameRootFolder);
-const dirPath = '/home/ankit/Downloads/videoTutorials/Git/Learning Git and GitHub/[TutsNode.com] - Learning Git and GitHub';
+const dirPath = '/home/ankit/Downloads/videoTutorials/Android/The_comprehensive_2019_android_development_masterclass';
 console.log('current dirName: ', __dirname);
 console.log('dirPath: ', dirPath);
 

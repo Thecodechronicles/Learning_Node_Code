@@ -175,7 +175,13 @@ mongooseM.modelM = function (collectionName, collectionObject) {
         Object.prototype.save = function () {
 
             setTimeout(() => {
-                resolveThread(randomObject.email + ' in ' + collectionName + ' saved');
+                try {
+                    // get some result back or else throe new Error() which will be caught (catch block) below
+                    resolveThread(randomObject.email + ' in ' + collectionName + ' saved');
+                }
+                catch (error) {
+                    rejectThread(`There's an error, Have a look: ${error.stack}`)
+                }
             }, 2000);
 
             if (randomObject.email == collectionData.email) {
