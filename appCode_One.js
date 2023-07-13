@@ -71,11 +71,13 @@
 // // console.log(ExtractTextWebpackPlugin);
 
 // const pluginObject = new ExtractTextWebpackPlugin('style.css');
+// const standAloneFunction = ExtractTextWebpackPlugin.extract;
 
+// console.log('standAloneFunction_extract() : ', standAloneFunction({ use: ['css-loader', 'sass-loader'] }));
 // console.log('ExtractTextWebpackPlugin_extract() : ', ExtractTextWebpackPlugin.extract({ use: ['css-loader', 'sass-loader'] }));
 // console.log('ExtractTextWebpackPlugin_new ExtractTextWebpackPlugin() : ', new ExtractTextWebpackPlugin('style.css'));
 
-// console.log('ExtractTextWebpackPlugin_extract() : ', pluginObject.extract({ use: ['css-loader', 'sass-loader'] }));
+// console.log('pluginObject_extract() : ', pluginObject.extract({ use: ['css-loader', 'sass-loader'] }));
 // console.log('pluginObject : ', pluginObject);
 // // console.log(JSON.stringify(pluginObject));
 // console.log('prototype: ', ExtractTextWebpackPlugin.prototype)
