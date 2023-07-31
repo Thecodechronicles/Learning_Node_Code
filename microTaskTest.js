@@ -35,7 +35,7 @@ function processTaskQueue() {
     // if (task) {
     //     task();
     //     // queueMicrotask(processTaskQueue); // redundant.. not needed.. output doesn't change after commenting this line
-    //     // // coz by the time the callback of this microtask comes to run all three previous microtask would
+    //     // // coz by the time the callback of this microtask comes to run, all three previous microtask would
     //     // // have completed their run and emptied the taskQueue array
 
     //     // queueMicrotask(() => { console.log('hello !') });

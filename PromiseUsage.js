@@ -37,9 +37,10 @@ const promiseTest = (a, b) => {
             else {
                 resolve(a + b);
             }
-        }, 11000);
+        }, 5000);
 
         console.log('promiseTestOne !');
+        // return 'abc';
     });
 }
 
@@ -47,7 +48,7 @@ const asyncTest = async () => {
     const sum = await promiseTest(11, 11);
     const sumOne = await promiseTest(11, 7);
     console.log('sumOne: ', sumOne);
-    // return 5;
+    return sumOne;
 }
 
 asyncTest()
@@ -61,6 +62,10 @@ asyncTest()
 // promiseTest(11, 4)
 //     .then((result) => {
 //         console.log(result);
+//         return result;
+//     })
+//     .then((result) => {
+//         console.log('result 2: ', result);
 //     })
 //     .catch((error) => {
 //         console.log(error);
