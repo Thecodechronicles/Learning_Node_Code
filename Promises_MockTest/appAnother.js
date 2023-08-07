@@ -172,10 +172,22 @@ mongooseM.modelM = function (collectionName, collectionObject) {
             // rejectThread('collectionName not found');
         }, 5000);
 
-        return new promiseM((resolve, reject) => {
-            resolveThread = resolve;
-            rejectThread = reject;
-        });
+        // return new promiseM((resolve, reject) => {  // returning a promise
+        //     resolveThread = resolve;
+        //     rejectThread = reject;
+        // });
+
+        return { // returning thenable and not a promise
+            then: function (callback) {
+                new promiseM((resolve, reject) => {
+                    resolveThread = resolve;
+                    rejectThread = reject;
+                }).then((result) => {
+                    callback(result);
+                });
+            }
+        }
+
     }
     return modelObject;
 }

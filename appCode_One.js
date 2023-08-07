@@ -167,3 +167,27 @@ console.log(stateAbzg);
 
 
 // console.log(setState(21));
+
+
+
+
+const abc = {
+    a: class lmn {
+        constructor() {
+            console.log('class as a property of an object !');
+        }
+    }
+}
+
+new abc.a();
+
+export const ijk = class ijk {
+
+}
+
+
+function ghi() {
+    {
+
+    }
+}
