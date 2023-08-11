@@ -90,6 +90,42 @@ var users =
             "__v": 0
         },
 
+        {
+            "_id": {
+                "$oid": "64d5073ec20365cf1043d6c6"
+            },
+            "name": "Dr Jackal",
+            "email": "gangadhar@shaktiman.com",
+            "password": "kilvish1",
+            "tokens": [
+                {
+                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NGQ1MDczZWMyMDM2NWNmMTA0M2Q2YzYiLCJpYXQiOjE2OTE2ODI2MjN9.YcAT9ZrFjha6AK4EKaO8lCHI75DjWlR8PGDQkszLUtY",
+                    "_id": {
+                        "$oid": "64d5073fc20365cf1043d6c8"
+                    }
+                }
+            ],
+            "__v": 1
+        },
+
+        {
+            "_id": {
+                "$oid": "64d507da289782f9a6851114"
+            },
+            "name": "Dr Jackal5",
+            "email": "gangadhar5@shaktiman.com",
+            "password": "kilvish5",
+            "tokens": [
+                {
+                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NGQ1MDdkYTI4OTc4MmY5YTY4NTExMTQiLCJpYXQiOjE2OTE2ODI3Nzh9.gN8FZJ57KI7eGTAxj0c2To3Th_tev-qBlbPKLT5YtjI",
+                    "_id": {
+                        "$oid": "64d507da289782f9a6851115"
+                    }
+                }
+            ],
+            "__v": 0
+        },
+
         { savedTillHereProp: true },
 
         // {
@@ -340,7 +376,7 @@ var updatable =
             "_id": {
                 "$oid": "64c7dd0e3fb211d19a946eeb"
             },
-            "name": "Mony Fuse5",
+            "name": "nomy muse",
             "email": "fonymuse5@azarahem11.com",
             "password": "mandraingrey5!",
             "__v": 0
@@ -350,7 +386,7 @@ var updatable =
             "_id": {
                 "$oid": "64c80350a5f9c7e5cca18cca"
             },
-            "name": "Mony Fuse11",
+            "name": "Fony Muse",
             "email": "fonymuse11@azarahem11.com",
             "password": "mandrainyellow11!",
             "__v": 0

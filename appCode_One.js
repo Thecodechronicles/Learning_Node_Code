@@ -44,6 +44,29 @@
 //     }, 1000);
 // }
 
+// // Code Example 2: Problem
+// for (var i = 0; i < 5; i++) {
+//     setTimeout(() => {
+//         console.log(i);
+//     }, 1000);
+// }
+
+// // Code Example 2: Solution, Type 1
+// for (var i = 0; i < 5; i++) {
+//     const value = i; // const is block-scoped
+//     setTimeout(() => {
+//         console.log(value);
+//     }, 1000);
+// }
+
+// // Code Example 2: Solution, Type 2
+// for (let i = 0; i < 5; i++) { // let is also block-scoped
+//     setTimeout(() => {
+//         console.log(i);
+//     }, 1000);
+// }
+
+
 // console.log(Math.round(8.96 * 100));
 
 // console.log({ 1: [{ a: 'hey !' }] });
@@ -174,19 +197,48 @@ console.log(stateAbzg);
 const abc = {
     a: class lmn {
         constructor() {
-            console.log('class as a property of an object !');
+            console.log('class as a property of an object ! ', this);
+            console.log(abc.b);
         }
-    }
+    },
+
+    b: 'abc'
 }
 
 new abc.a();
 
-export const ijk = class ijk {
+// export const ijk = class ijk {
 
-}
+// }
 
 function ghi() {
     {
 
     }
 }
+
+
+var jkl = 'prop'
+
+var uvw =
+{
+    prop: 'value of prop',
+    [jkl]: 'value of jkl',
+    'ijk': 'nyu',
+    'abc.i': 'pqr',
+    propTwo: {
+        mno: 'value of propTwo'
+    }
+}
+
+var propString = 'propTwo';
+var mnoString = 'mno'
+
+console.log(uvw[jkl]);
+console.log(uvw.prop);
+console.log(uvw.ijk);
+console.log(uvw['abc.i']);
+console.log(uvw[propString][mnoString])
+
+var arrObj = Object.keys(uvw);
+console.log(arrObj);

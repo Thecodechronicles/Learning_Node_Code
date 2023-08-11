@@ -44,7 +44,7 @@ function ijk() {
 
 //         //  Back to ES6:
 //         // console.log('MyClass_this:', this);
-//         // this.ijkProp = 'Hi !';
+//         // this.ijkProp = 'Hi !'; // here, 'this' will be equal to whatever 'super()' call returns
 //         // console.log('MyClass_thisAgain:', this);
 //     }
 // }
