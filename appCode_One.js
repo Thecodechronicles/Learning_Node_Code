@@ -231,6 +231,12 @@ var uvw =
     }
 }
 
+uvw.toJSON = function () { // If toJSON property is given, as a function, on an object. It is called by JSON.stringify()
+    return {
+        abc: 'ijk'
+    }
+}
+
 var propString = 'propTwo';
 var mnoString = 'mno'
 
@@ -242,3 +248,48 @@ console.log(uvw[propString][mnoString])
 
 var arrObj = Object.keys(uvw);
 console.log(arrObj);
+
+// uvw.toObject(); // uvw.toObject is not a function, It is only implemented by mongoose
+
+console.log('JsonStringifY: ', JSON.stringify(uvw));
+
+// console.log('process: ', process) // js files can't access 'process'.. But, Webpack provides 'process' in react app, 'var process' is.....
+// .....defined and then, is injected in every module inside the bundler. In webpack terminology, provinding global variables inside.....
+// .....react app is called as 'shimming'. 'process' in webpack is a 'shim' so that it works across the react app
+// For more on shimming: ref: https://webpack.js.org/guides/shimming/
+
+
+
+// function rjm() { }
+
+// var ijk = {
+//     type: rjm
+// }
+
+// console.log(ijk.toString());
+
+
+// Interview Question: Techwarenzen
+// solution
+// var arrOne = ['a', 'b', 'c', 'd', 'e', 'm', 'n', 'p'];
+// var arrTwo = ['i', 'j', 'k', 'l'];
+
+// var returnElem = arrOne.filter((elementOne) => {
+//     var returnElement = arrTwo.filter((elementTwo) => {
+//         if (elementTwo == elementOne) {
+//             console.log('element', elementOne);
+//             return true;
+//         }
+//     });
+//     if (returnElement.length) {
+//         console.log('returnElement', returnElement);
+//         return true;
+//     }
+// });
+
+// if (returnElem.length) {
+//     console.log('returnElem', returnElem);
+// }
+// else {
+//     console.log('false');
+// }

@@ -110,20 +110,26 @@ var users =
 
         {
             "_id": {
-                "$oid": "64d507da289782f9a6851114"
+                "$oid": "64fdd6d5790200ac9a3d7466"
             },
-            "name": "Dr Jackal5",
-            "email": "gangadhar5@shaktiman.com",
-            "password": "kilvish5",
+            "name": "Dr Jackal11",
+            "email": "gangadhar11@shaktiman.com",
+            "password": "kilvish11",
             "tokens": [
                 {
-                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NGQ1MDdkYTI4OTc4MmY5YTY4NTExMTQiLCJpYXQiOjE2OTE2ODI3Nzh9.gN8FZJ57KI7eGTAxj0c2To3Th_tev-qBlbPKLT5YtjI",
+                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NGZkZDZkNTc5MDIwMGFjOWEzZDc0NjYiLCJpYXQiOjE2OTQzNTcyMDV9.X5nRB1oOZ8v0kKjLQOn0b-cfhKmQTul7GJXnwigI1-4",
                     "_id": {
-                        "$oid": "64d507da289782f9a6851115"
+                        "$oid": "64fdd6d5790200ac9a3d7468"
+                    }
+                },
+                {
+                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NGZkZDZkNTc5MDIwMGFjOWEzZDc0NjYiLCJpYXQiOjE2OTQzNTcyMTN9.VatcS0CvxRxKVwCXhq0Nt10pxbulNrLOX2aRCyWI0Jk",
+                    "_id": {
+                        "$oid": "64fdd6dd790200ac9a3d746b"
                     }
                 }
             ],
-            "__v": 0
+            "__v": 2
         },
 
         { savedTillHereProp: true },
@@ -392,3 +398,135 @@ var updatable =
             "__v": 0
         }
     ]
+
+
+var obj = {
+    _id: new ObjectId("64d507da289782f9a6851114"),
+    name: 'Dr Jackal5',
+    email: 'gangadhar5@shaktiman.com',
+    password: '$2a$08$QKG2O6O7U9YpRgNDuEQ18OujBg8suOIZVcf79jNGe6FsDU64TYS4G',
+    tokens: [
+        {
+            token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NGQ1MDdkYTI4OTc4MmY5YTY4NTExMTQiLCJpYXQiOjE2OTE3NjI3NjV9.2irt3NN2J5_S9E5jlfuEgaFl0phz4iSJHdQCMuN5n1w',
+            _id: new ObjectId("64d6404d9bfc6aaf31add2b0")
+        },
+        {
+            token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NGQ1MDdkYTI4OTc4MmY5YTY4NTExMTQiLCJpYXQiOjE2OTE4MjcwMjd9.sg7n2rK374idLU3fRFdSF6O_fjKEULCazmukmtzt1VI',
+            _id: new ObjectId("64d73b532aa3ab55d6d3bb84")
+        }
+    ],
+    __v: 16
+}
+
+var objObject = {
+    _id: new ObjectId("64d507da289782f9a6851114"),
+    name: 'Dr Jackal5',
+    email: 'gangadhar5@shaktiman.com',
+    password: '$2a$08$QKG2O6O7U9YpRgNDuEQ18OujBg8suOIZVcf79jNGe6FsDU64TYS4G',
+    tokens: [
+        {
+            token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NGQ1MDdkYTI4OTc4MmY5YTY4NTExMTQiLCJpYXQiOjE2OTE3NjI3NjV9.2irt3NN2J5_S9E5jlfuEgaFl0phz4iSJHdQCMuN5n1w',
+            _id: new ObjectId("64d6404d9bfc6aaf31add2b0")
+        },
+        {
+            token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NGQ1MDdkYTI4OTc4MmY5YTY4NTExMTQiLCJpYXQiOjE2OTE4MjcwMjd9.sg7n2rK374idLU3fRFdSF6O_fjKEULCazmukmtzt1VI',
+            _id: new ObjectId("64d73b532aa3ab55d6d3bb84")
+        }
+    ],
+    __v: 16
+}
+
+var objJSON = {
+    _id: new ObjectId("64d507da289782f9a6851114"),
+    name: 'Dr Jackal5',
+    email: 'gangadhar5@shaktiman.com',
+    password: '$2a$08$QKG2O6O7U9YpRgNDuEQ18OujBg8suOIZVcf79jNGe6FsDU64TYS4G',
+    tokens: [
+        {
+            token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NGQ1MDdkYTI4OTc4MmY5YTY4NTExMTQiLCJpYXQiOjE2OTE3NjI3NjV9.2irt3NN2J5_S9E5jlfuEgaFl0phz4iSJHdQCMuN5n1w',
+            _id: new ObjectId("64d6404d9bfc6aaf31add2b0")
+        },
+        {
+            token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NGQ1MDdkYTI4OTc4MmY5YTY4NTExMTQiLCJpYXQiOjE2OTE4MjcwMjd9.sg7n2rK374idLU3fRFdSF6O_fjKEULCazmukmtzt1VI',
+            _id: new ObjectId("64d73b532aa3ab55d6d3bb84")
+        },
+        {
+            token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NGQ1MDdkYTI4OTc4MmY5YTY4NTExMTQiLCJpYXQiOjE2OTE4MjcwOTJ9.nVc2CEvXt181J3I1gnigYWPalPg2tFvabRBi3jc5usI',
+            _id: new ObjectId("64d73b94690ca3477a5eb447")
+        }
+    ],
+    __v: 17
+}
+
+
+
+
+
+// Oauth for Google:
+
+// 1) https://accounts.google.com/o/oauth2/v2/auth   .....almost same for Imlicit Flow and Authorization Flow
+// 2) https://oauth2.googleapis.com/token             .....for authorization flow
+// 3) https://www.googleapis.com/oauth2/v1/userinfo   .....almost same for Imlicit Flow and Authorization Flow
+
+
+// options for 1) api:
+
+// const options = {
+//     redirect_uri: process.env.NEXT_PUBLIC_GOOGLE_OAUTH_REDIRECT_URL as string,
+//     client_id: process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID as string,
+//     access_type: "offline",
+//     response_type: "code(for authorization flow)", or "access_token(for implicit flow)"
+//     prompt: "consent",
+//     scope: [
+//       "https://www.googleapis.com/auth/userinfo.profile",
+//       "https://www.googleapis.com/auth/userinfo.email",
+//     ].join(" "),
+//   };
+
+
+// Authorization Flow: 3 apis or 2 apis, depends (1,2 and 3  OR  1 and 2)
+// Implicit Flow: 2 apis (1 and 3)
+
+// Note:  for 3rd api: After the scope(s) of access required by the API have been granted, Include the access token.....
+// .....in a request to the API by including either an access_token query parameter or an.....
+// .....Authorization HTTP header Bearer value. When possible, the HTTP header is preferable
+// 
+// eg:   3.1)   https://www.googleapis.com/oauth2/v1/userinfo?access_token=${access_token}  
+// 
+//  OR.....
+// 
+//       3.2)  `https://www.googleapis.com/oauth2/v1/userinfo`,
+//          {
+//              headers: {
+//              Authorization: `Bearer ${access_token}`,
+//              },
+//          }  
+// 
+// SubNote: (3.1 and 3.2 are for Implicit Flows)
+// 
+//       3.3) `https://www.googleapis.com/oauth2/v1/userinfo?alt=json&access_token=${access_token}`,
+//          {
+//              headers: {
+//              Authorization: `Bearer ${id_token}`,
+//              },
+//          }
+// 
+// SubNote: (3.3 is for Authorization Flow)
+
+
+
+
+
+// // Regex decodecURIComponent:
+// // 
+// let params = {};
+// let regex = /([^&=]+)=([^&]*)/g, m;
+// //
+// while (m = regex.exec(location.href)) {
+//     //
+//     console.log('abc');
+//     params[decodeURIComponent(m[1])] = decodeURIComponent(m[2]);
+//     console.log(`params[${decodeURIComponent(m[1])}] = ${decodeURIComponent(m[2])}`);
+// }
+// //
+// // ref: https://www.youtube.com/watch?v=bOd4eFqIg00&list=PLNgCNuHE5Ub0lLhO015tYeZacNlup-Grs&index=10&t=1393s
